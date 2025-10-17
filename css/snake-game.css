@@ -1,0 +1,10 @@
+#the-game {
+  display: block;
+  margin: 20px auto;
+  background-color: #222;
+  border: 1px solid #000;
+}
+
+.content p {
+    text-align: center;
+}

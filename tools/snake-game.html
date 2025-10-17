@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR 코드 생성기 - ToolBox</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>스네이크 게임 - ToolBox</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/snake-game.css">
 </head>
 <body>
     <div class="container">
         <header class="top-bar">
-            <h1>ToolBox</h1>
+            <h1><a href="../" style="text-decoration: none; color: inherit;">ToolBox</a></h1>
+            <button class="sidebar-toggle" aria-label="Toggle sidebar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </header>
         <aside class="sidebar">
             <nav>
@@ -33,18 +36,18 @@
                     <li><a href="qr-code-generator.html">QR 코드 생성기</a></li>
                     <li><a href="bmi-calculator.html">BMI 계산기</a></li>
                     <li><a href="password-generator.html">비밀번호 생성기</a></li>
+                    <li class="category">재미있는 게임</li>
+                    <li><a href="ladder-game.html">사다리 게임</a></li>
+                    <li><a href="2048-game.html">2048 게임</a></li>
+                    <li><a href="snake-game.html">스네이크 게임</a></li>
                 </ul>
             </nav>
         </aside>
         <main class="content">
-            <h2>QR 코드 생성기</h2>
-            <div class="tool-container" id="qr-generator-tool">
-                <input type="text" id="qr-text" placeholder="QR 코드로 만들 텍스트나 URL 입력">
-                <button id="generate-qr-btn">QR 코드 생성</button>
-                <div id="qr-code-container" style="margin-top: 20px; text-align: center;">
-                    <!-- QR Code will be displayed here -->
-                </div>
-            </div>
+            <h2>스네이크 게임</h2>
+            <p>화살표 키, WASD, 또는 HJKL(vim 키)로 뱀을 조종하세요.</p>
+            <canvas id="the-game" width="480" height="320"></canvas>
+            <p>음식을 모아 뱀을 길게 만들고 속도를 높이세요.</p>
         </main>
         <footer class="footer">
             <p>&copy; 2024 ToolBox. All Rights Reserved.</p>
@@ -56,7 +59,7 @@
             </nav>
         </footer>
     </div>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <script src="../js/qr-code-generator.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/snake-game.js"></script>
 </body>
 </html>
